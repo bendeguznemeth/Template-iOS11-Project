@@ -95,18 +95,50 @@
 				EDAC999B241AC7770023008D /* AppDelegate.swift */,
 				EDAC999D241AC7770023008D /* SceneDelegate.swift */,
 				EDAC999F241AC7770023008D /* HomeViewController.swift */,
-				EDAC99B1241BB16D0023008D /* AppError.swift */,
-				EDAC99B3241BB1950023008D /* Parsing.swift */,
-				EDAC99B7241BD7070023008D /* SearchResult.swift */,
-				EDAC99B9241BD7300023008D /* Stock.swift */,
-				EDAC99BB241BD7C80023008D /* StocksProviding.swift */,
-				EDAC99BD241BD9470023008D /* StocksProvider.swift */,
+				EDAC99BF241BE9980023008D /* Networking */,
 				EDAC99A1241AC7770023008D /* Main.storyboard */,
 				EDAC99A4241AC7790023008D /* Assets.xcassets */,
 				EDAC99A6241AC7790023008D /* LaunchScreen.storyboard */,
 				EDAC99A9241AC7790023008D /* Info.plist */,
 			);
 			path = "Template-iOS11-Project";
+			sourceTree = "<group>";
+		};
+		EDAC99BF241BE9980023008D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EDAC99B1241BB16D0023008D /* AppError.swift */,
+				EDAC99B3241BB1950023008D /* Parsing.swift */,
+				EDAC99C0241BE9AC0023008D /* DomainModel */,
+				EDAC99C1241BE9C60023008D /* Providers */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EDAC99C0241BE9AC0023008D /* DomainModel */ = {
+			isa = PBXGroup;
+			children = (
+				EDAC99B7241BD7070023008D /* SearchResult.swift */,
+				EDAC99B9241BD7300023008D /* Stock.swift */,
+			);
+			path = DomainModel;
+			sourceTree = "<group>";
+		};
+		EDAC99C1241BE9C60023008D /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				EDAC99C2241BE9D20023008D /* StocksProvider */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		EDAC99C2241BE9D20023008D /* StocksProvider */ = {
+			isa = PBXGroup;
+			children = (
+				EDAC99BB241BD7C80023008D /* StocksProviding.swift */,
+				EDAC99BD241BD9470023008D /* StocksProvider.swift */,
+			);
+			path = StocksProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
