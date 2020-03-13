@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-Template-iOS11-Project/Pods-Template-iOS11-Project-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Bagel/Bagel.framework
+${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
