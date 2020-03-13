@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		EDAC99A3241AC7770023008D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDAC99A1241AC7770023008D /* Main.storyboard */; };
 		EDAC99A5241AC7790023008D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDAC99A4241AC7790023008D /* Assets.xcassets */; };
 		EDAC99A8241AC7790023008D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDAC99A6241AC7790023008D /* LaunchScreen.storyboard */; };
+		EDAC99B2241BB16D0023008D /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC99B1241BB16D0023008D /* AppError.swift */; };
+		EDAC99B4241BB1950023008D /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC99B3241BB1950023008D /* Parsing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		EDAC99A4241AC7790023008D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDAC99A7241AC7790023008D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDAC99A9241AC7790023008D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDAC99B1241BB16D0023008D /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		EDAC99B3241BB1950023008D /* Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +52,6 @@
 				8D390A95B5C342EEC9BAAEFB /* Pods-Template-iOS11-Project.debug.xcconfig */,
 				1345A87663883F66C47021D2 /* Pods-Template-iOS11-Project.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,6 +87,8 @@
 				EDAC999B241AC7770023008D /* AppDelegate.swift */,
 				EDAC999D241AC7770023008D /* SceneDelegate.swift */,
 				EDAC999F241AC7770023008D /* HomeViewController.swift */,
+				EDAC99B1241BB16D0023008D /* AppError.swift */,
+				EDAC99B3241BB1950023008D /* Parsing.swift */,
 				EDAC99A1241AC7770023008D /* Main.storyboard */,
 				EDAC99A4241AC7790023008D /* Assets.xcassets */,
 				EDAC99A6241AC7790023008D /* LaunchScreen.storyboard */,
@@ -207,6 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDAC99B2241BB16D0023008D /* AppError.swift in Sources */,
+				EDAC99B4241BB1950023008D /* Parsing.swift in Sources */,
 				EDAC99A0241AC7770023008D /* HomeViewController.swift in Sources */,
 				EDAC999C241AC7770023008D /* AppDelegate.swift in Sources */,
 				EDAC999E241AC7770023008D /* SceneDelegate.swift in Sources */,
