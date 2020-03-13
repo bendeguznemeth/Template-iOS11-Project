@@ -18,6 +18,8 @@
 		EDAC99B4241BB1950023008D /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC99B3241BB1950023008D /* Parsing.swift */; };
 		EDAC99B8241BD7070023008D /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC99B7241BD7070023008D /* SearchResult.swift */; };
 		EDAC99BA241BD7300023008D /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC99B9241BD7300023008D /* Stock.swift */; };
+		EDAC99BC241BD7C80023008D /* StocksProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC99BB241BD7C80023008D /* StocksProviding.swift */; };
+		EDAC99BE241BD9470023008D /* StocksProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC99BD241BD9470023008D /* StocksProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		EDAC99B3241BB1950023008D /* Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing.swift; sourceTree = "<group>"; };
 		EDAC99B7241BD7070023008D /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		EDAC99B9241BD7300023008D /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		EDAC99BB241BD7C80023008D /* StocksProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksProviding.swift; sourceTree = "<group>"; };
+		EDAC99BD241BD9470023008D /* StocksProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 				EDAC99B3241BB1950023008D /* Parsing.swift */,
 				EDAC99B7241BD7070023008D /* SearchResult.swift */,
 				EDAC99B9241BD7300023008D /* Stock.swift */,
+				EDAC99BB241BD7C80023008D /* StocksProviding.swift */,
+				EDAC99BD241BD9470023008D /* StocksProvider.swift */,
 				EDAC99A1241AC7770023008D /* Main.storyboard */,
 				EDAC99A4241AC7790023008D /* Assets.xcassets */,
 				EDAC99A6241AC7790023008D /* LaunchScreen.storyboard */,
@@ -219,8 +225,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDAC99B2241BB16D0023008D /* AppError.swift in Sources */,
+				EDAC99BC241BD7C80023008D /* StocksProviding.swift in Sources */,
 				EDAC99B4241BB1950023008D /* Parsing.swift in Sources */,
 				EDAC99A0241AC7770023008D /* HomeViewController.swift in Sources */,
+				EDAC99BE241BD9470023008D /* StocksProvider.swift in Sources */,
 				EDAC99BA241BD7300023008D /* Stock.swift in Sources */,
 				EDAC999C241AC7770023008D /* AppDelegate.swift in Sources */,
 				EDAC99B8241BD7070023008D /* SearchResult.swift in Sources */,
