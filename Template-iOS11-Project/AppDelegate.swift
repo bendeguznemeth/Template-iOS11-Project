@@ -7,7 +7,10 @@
 //
 
 import UIKit
+
+#if DEBUG
 import Bagel
+#endif
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        #if DEBUG
         Bagel.start()
+        #endif
         
         return true
     }
