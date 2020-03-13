@@ -94,12 +94,11 @@
 			children = (
 				EDAC999B241AC7770023008D /* AppDelegate.swift */,
 				EDAC999D241AC7770023008D /* SceneDelegate.swift */,
-				EDAC999F241AC7770023008D /* HomeViewController.swift */,
-				EDAC99BF241BE9980023008D /* Networking */,
-				EDAC99A1241AC7770023008D /* Main.storyboard */,
-				EDAC99A4241AC7790023008D /* Assets.xcassets */,
 				EDAC99A6241AC7790023008D /* LaunchScreen.storyboard */,
+				EDAC99A4241AC7790023008D /* Assets.xcassets */,
 				EDAC99A9241AC7790023008D /* Info.plist */,
+				EDAC99C3241C1B3B0023008D /* UseCases */,
+				EDAC99BF241BE9980023008D /* Networking */,
 			);
 			path = "Template-iOS11-Project";
 			sourceTree = "<group>";
@@ -139,6 +138,23 @@
 				EDAC99BD241BD9470023008D /* StocksProvider.swift */,
 			);
 			path = StocksProvider;
+			sourceTree = "<group>";
+		};
+		EDAC99C3241C1B3B0023008D /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				EDAC99C4241C1B4C0023008D /* Home */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		EDAC99C4241C1B4C0023008D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EDAC99A1241AC7770023008D /* Main.storyboard */,
+				EDAC999F241AC7770023008D /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
