@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol StocksProviding {
     func fetchStocks(withSymbols symbols: [String], completion: @escaping (Result<SearchResult, AppError>) -> Void)
+    func fetchStocks(withSymbols symbols: [String]) -> Observable<SearchResult>
 }

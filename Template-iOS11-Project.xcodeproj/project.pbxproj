@@ -20,6 +20,8 @@
 		EDAC99BA241BD7300023008D /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC99B9241BD7300023008D /* Stock.swift */; };
 		EDAC99BC241BD7C80023008D /* StocksProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC99BB241BD7C80023008D /* StocksProviding.swift */; };
 		EDAC99BE241BD9470023008D /* StocksProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC99BD241BD9470023008D /* StocksProvider.swift */; };
+		EDAC99C6241C287B0023008D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC99C5241C287B0023008D /* HomeViewModel.swift */; };
+		EDAC99C8241C3C3F0023008D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC99C7241C3C3F0023008D /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		EDAC99B9241BD7300023008D /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		EDAC99BB241BD7C80023008D /* StocksProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksProviding.swift; sourceTree = "<group>"; };
 		EDAC99BD241BD9470023008D /* StocksProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksProvider.swift; sourceTree = "<group>"; };
+		EDAC99C5241C287B0023008D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EDAC99C7241C3C3F0023008D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +98,11 @@
 			children = (
 				EDAC999B241AC7770023008D /* AppDelegate.swift */,
 				EDAC999D241AC7770023008D /* SceneDelegate.swift */,
+				EDAC99A1241AC7770023008D /* Main.storyboard */,
 				EDAC99A6241AC7790023008D /* LaunchScreen.storyboard */,
 				EDAC99A4241AC7790023008D /* Assets.xcassets */,
 				EDAC99A9241AC7790023008D /* Info.plist */,
+				EDAC99C9241CC8460023008D /* Extensions */,
 				EDAC99C3241C1B3B0023008D /* UseCases */,
 				EDAC99BF241BE9980023008D /* Networking */,
 			);
@@ -151,10 +157,18 @@
 		EDAC99C4241C1B4C0023008D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				EDAC99A1241AC7770023008D /* Main.storyboard */,
 				EDAC999F241AC7770023008D /* HomeViewController.swift */,
+				EDAC99C5241C287B0023008D /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		EDAC99C9241CC8460023008D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EDAC99C7241C3C3F0023008D /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,8 +287,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDAC99B2241BB16D0023008D /* AppError.swift in Sources */,
+				EDAC99C8241C3C3F0023008D /* UIViewController+Extension.swift in Sources */,
 				EDAC99BC241BD7C80023008D /* StocksProviding.swift in Sources */,
 				EDAC99B4241BB1950023008D /* Parsing.swift in Sources */,
+				EDAC99C6241C287B0023008D /* HomeViewModel.swift in Sources */,
 				EDAC99A0241AC7770023008D /* HomeViewController.swift in Sources */,
 				EDAC99BE241BD9470023008D /* StocksProvider.swift in Sources */,
 				EDAC99BA241BD7300023008D /* Stock.swift in Sources */,

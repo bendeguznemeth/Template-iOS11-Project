@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import RxSwift
 
 class StocksProvider: StocksProviding {
     
@@ -20,6 +21,7 @@ class StocksProvider: StocksProviding {
         params["symbols"] = symbols.joined(separator: ",")
         
         AF.request(url, method: .get, parameters: params)
+            .validate()
             .responseData { (response) in
                 switch response.result {
                 case .success(let data):
@@ -27,6 +29,33 @@ class StocksProvider: StocksProviding {
                 case .failure(let error):
                     completion(.failure(.network(description: error.localizedDescription)))
                 }
+        }
+    }
+    
+    func fetchStocks(withSymbols symbols: [String]) -> Observable<SearchResult> {
+        return Observable.create { (observer) -> Disposable in
+            var params = self.APIKeyParam
+            params["symbols"] = symbols.joined(separator: ",")
+            
+            AF.request(self.url, method: .get, parameters: params)
+                .validate()
+                .responseData { (response) in
+                    switch response.result {
+                    case .success(let data):
+                        let searchResult: Result<SearchResult, AppError> = decode(data)
+                        
+                        switch searchResult {
+                        case .success(let searchResult):
+                            observer.onNext(searchResult)
+                        case .failure(let appError):
+                            observer.onError(appError)
+                        }
+                    case .failure(let error):
+                        observer.onError(AppError.network(description: error.localizedDescription))
+                    }
+            }
+            
+            return Disposables.create()
         }
     }
 }
