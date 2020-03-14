@@ -22,7 +22,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         bindViewModel()
+        setupCellDeleting()
         setupCellTapHandling()
+        
         viewModel.fetchStocks()
     }
     
@@ -63,6 +65,18 @@ class HomeViewController: UIViewController {
             .subscribe(onNext: { [weak self] stockViewModel in
                 self?.performSegue(withIdentifier: "showStockDetail", sender: stockViewModel)
             })
+            .disposed(by: disposeBag)
+    }
+    
+    private func setupCellDeleting() {
+        stocksTableView
+            .rx
+            .itemDeleted
+            .subscribe(
+                onNext: { [weak self] in
+                    self?.viewModel.delete(at: $0)
+                }
+        )
             .disposed(by: disposeBag)
     }
     

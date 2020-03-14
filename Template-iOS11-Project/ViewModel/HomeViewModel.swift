@@ -23,6 +23,8 @@ class HomeViewModel {
     private let disposeBag = DisposeBag()
     private let stocksProvider: StocksProviding
     
+    private var symbols = ["TSLA", "MMM", "BEN", "MMP", "MSM", "TAP"]
+    
     init(stocksProvider: StocksProviding = StocksProvider()) {
         self.stocksProvider = stocksProvider
     }
@@ -30,7 +32,7 @@ class HomeViewModel {
     func fetchStocks() {
         loading.onNext(true)
         stocksProvider
-            .fetchStocks(withSymbols: ["TSLA", "MMM", "BEN", "MMP", "MSM", "TAP"])
+            .fetchStocks(withSymbols: symbols)
             .subscribe(
                 onNext: { [weak self] searchResult in
                     self?.loading.onNext(false)
@@ -48,5 +50,12 @@ class HomeViewModel {
                 }
         )
             .disposed(by: disposeBag)
+    }
+    
+    func delete(at indexPath: IndexPath) {
+        var stocks = self.stocks.value
+        stocks.remove(at: indexPath.row)
+        self.stocks.accept(stocks)
+        symbols.remove(at: indexPath.row)
     }
 }

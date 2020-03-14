@@ -20,19 +20,19 @@ struct StockViewModel {
     }
     
     var price: String {
-        String(format: "%.2f", stock.lastPrice)
+        String(format: "%.2f", stock.lastPrice ?? 0)
     }
     
     var change: String {
-        (stock.percentChange.sign != .minus ? "+" : "") + String(format: "%.2f", (stock.lastPrice * (stock.percentChange / 100)))
+        ((stock.percentChange ?? 0).sign != .minus ? "+" : "") + String(format: "%.2f", (stock.lastPrice ?? 0 * ((stock.percentChange ?? 0) / 100)))
     }
     
     var percentChange: String {
-        (stock.percentChange.sign != .minus ? "+" : "") + String(format: "%.2f", stock.percentChange) + "%"
+        ((stock.percentChange ?? 0).sign != .minus ? "+" : "") + String(format: "%.2f", stock.percentChange ?? 0) + "%"
     }
 
     var color: UIColor {
-        stock.percentChange.sign == .minus ? .red : .green
+        (stock.percentChange ?? 0).sign == .minus ? .red : .green
     }
     
     init(withStock stock: Stock) {

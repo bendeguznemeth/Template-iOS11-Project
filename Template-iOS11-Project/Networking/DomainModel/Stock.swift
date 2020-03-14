@@ -11,6 +11,6 @@ import Foundation
 struct Stock: Codable {
     let symbol: String
     let name: String
-    let lastPrice: Double
-    let percentChange: Double
+    let lastPrice: Double?
+    let percentChange: Double?
 }
