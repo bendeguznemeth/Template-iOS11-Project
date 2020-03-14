@@ -8,8 +8,7 @@
 
 import Foundation
 
-struct Stock: Codable, Identifiable {
-    let id = UUID()
+struct Stock: Codable {
     let symbol: String
     let name: String
     let lastPrice: Double

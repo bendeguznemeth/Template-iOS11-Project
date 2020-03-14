@@ -12,7 +12,7 @@ class StockTableViewCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
     
-    var viewModel: StockCellViewModel? {
+    var viewModel: StockViewModel? {
         didSet {
             bindViewModel()
         }

@@ -1,5 +1,5 @@
 //
-//  StockCellViewModel.swift
+//  StockViewModel.swift
 //  Template-iOS11-Project
 //
 //  Created by Németh Bendegúz on 2020. 03. 14..
@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct StockCellViewModel {
+struct StockViewModel {
     private let stock: Stock
     
     var id: String { // this is the symbol as well

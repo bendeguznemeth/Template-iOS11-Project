@@ -61,11 +61,45 @@
                     <navigationItem key="navigationItem" title="Stocks" largeTitleDisplayMode="always" id="VzN-Sc-jdK"/>
                     <connections>
                         <outlet property="stocksTableView" destination="KJ1-h7-4bp" id="3MQ-dK-2kC"/>
+                        <segue destination="9bq-qo-FEg" kind="show" identifier="showStockDetail" id="Z63-0e-Lua"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="125.89285714285714"/>
+            <point key="canvasLocation" x="891" y="126"/>
+        </scene>
+        <!--Stock Detail-->
+        <scene sceneID="6r2-Zb-5w5">
+            <objects>
+                <viewController id="9bq-qo-FEg" customClass="StockDetailViewController" customModule="Template_iOS11_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5L6-a9-PXa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfm-0a-MSb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Xfm-0a-MSb" firstAttribute="top" secondItem="mb8-UO-ZZR" secondAttribute="top" id="7p8-Gb-14f"/>
+                            <constraint firstItem="mb8-UO-ZZR" firstAttribute="trailing" secondItem="Xfm-0a-MSb" secondAttribute="trailing" id="BPy-Pp-gOf"/>
+                            <constraint firstItem="Xfm-0a-MSb" firstAttribute="leading" secondItem="mb8-UO-ZZR" secondAttribute="leading" id="n17-iF-h0Z"/>
+                            <constraint firstItem="mb8-UO-ZZR" firstAttribute="bottom" secondItem="Xfm-0a-MSb" secondAttribute="bottom" id="xUb-p7-EYO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mb8-UO-ZZR"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stock Detail" id="40b-vP-IuL"/>
+                    <connections>
+                        <outlet property="label" destination="Xfm-0a-MSb" id="Fax-99-ykz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTY-I1-e6r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="126"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qvy-E6-x7x">
