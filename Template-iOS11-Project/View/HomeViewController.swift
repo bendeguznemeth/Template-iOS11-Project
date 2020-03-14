@@ -38,6 +38,18 @@ class HomeViewController: UIViewController {
         .disposed(by: disposeBag)
         
         viewModel
+            .loading
+            .map { [weak self] in
+                if $0 {
+                    self?.showLoadingView()
+                } else {
+                    self?.hideLoadingView()
+                }
+        }
+        .subscribe()
+        .disposed(by: disposeBag)
+        
+        viewModel
             .error
             .map { [weak self] in self?.presentError($0)}
             .subscribe()

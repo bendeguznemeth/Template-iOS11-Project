@@ -8,7 +8,29 @@
 
 import UIKit
 
+private var spinner: UIActivityIndicatorView?
+
 extension UIViewController {
+    
+    func showLoadingView() {
+        if spinner == nil, let window = UIApplication.shared.keyWindow {
+            let frame = UIScreen.main.bounds
+            spinner = UIActivityIndicatorView(frame: frame)
+            spinner!.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+            spinner!.style = .whiteLarge
+            window.addSubview(spinner!)
+            spinner!.startAnimating()
+        }
+    }
+    
+    func hideLoadingView() {
+        if spinner != nil {
+            spinner!.stopAnimating()
+            spinner!.removeFromSuperview()
+            spinner = nil
+        }
+    }
+    
     func presentAlert(withTitle title: String?, withMessage message: String?, withButtonTitle buttonTitle: String?, withButtonHandler buttonHandler: (() -> Void)? = nil) {
         let alertController = UIAlertController(title: title,
                                                 message: message,

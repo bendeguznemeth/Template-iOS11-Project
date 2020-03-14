@@ -17,12 +17,18 @@ class StockDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let viewModel = viewModel {
-            label.text = viewModel.id + "\n" +
-                viewModel.name + "\n" +
-                viewModel.price + "\n" +
-                viewModel.change + "\n" +
-                viewModel.percentChange
-        }
+        bindViewModel()
+    }
+    
+    private func bindViewModel() {
+        guard let viewModel = viewModel else { return }
+        
+        title = viewModel.name
+        
+        label.text = viewModel.id + "\n" +
+        viewModel.name + "\n" +
+        viewModel.price + "\n" +
+        viewModel.change + "\n" +
+        viewModel.percentChange
     }
 }
