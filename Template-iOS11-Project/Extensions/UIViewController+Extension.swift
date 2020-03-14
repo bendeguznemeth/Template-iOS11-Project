@@ -22,7 +22,7 @@ extension UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    func presentError(_ error: AppError, withButtonHandler buttonHandler: (() -> Void)? = nil) {
+    func presentError(_ error: Error, withButtonHandler buttonHandler: (() -> Void)? = nil) {
         presentAlert(withTitle: "Error occurred",
                      withMessage: error.localizedDescription,
                      withButtonTitle: "OK",

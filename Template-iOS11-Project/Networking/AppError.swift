@@ -9,6 +9,7 @@
 import Foundation
 
 enum AppError: Error {
-  case parsing(description: String)
-  case network(description: String)
+    case parsing(description: String)
+    case network(description: String)
+    case selfNotExists
 }

@@ -33,7 +33,12 @@ class StocksProvider: StocksProviding {
     }
     
     func fetchStocks(withSymbols symbols: [String]) -> Observable<SearchResult> {
-        return Observable.create { (observer) -> Disposable in
+        return Observable.create { [weak self] (observer) -> Disposable in
+            guard let self = self else {
+                observer.onError(AppError.selfNotExists)
+                return Disposables.create()
+            }
+            
             var params = self.APIKeyParam
             params["symbols"] = symbols.joined(separator: ",")
             
