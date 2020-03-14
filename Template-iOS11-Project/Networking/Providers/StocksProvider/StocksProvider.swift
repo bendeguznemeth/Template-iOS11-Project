@@ -16,22 +16,6 @@ class StocksProvider: StocksProviding {
     
     let APIKeyParam = ["apikey": "659099365cb31d72ee29e5b46e664945"]
     
-    func fetchStocks(withSymbols symbols: [String], completion: @escaping (Result<SearchResult, AppError>) -> Void) {
-        var params = APIKeyParam
-        params["symbols"] = symbols.joined(separator: ",")
-        
-        AF.request(url, method: .get, parameters: params)
-            .validate()
-            .responseData { (response) in
-                switch response.result {
-                case .success(let data):
-                    completion(decode(data))
-                case .failure(let error):
-                    completion(.failure(.network(description: error.localizedDescription)))
-                }
-        }
-    }
-    
     func fetchStocks(withSymbols symbols: [String]) -> Observable<SearchResult> {
         return Observable.create { [weak self] (observer) -> Disposable in
             guard let self = self else {

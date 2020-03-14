@@ -11,18 +11,19 @@ import RxSwift
 import RxCocoa
 
 class HomeViewModel {
-    var observableStocks: Observable<[Stock]> {
+    var stockCells: Observable<[StockCellViewModel]> {
         return stocks.asObservable()
     }
     
-    private let stocks = BehaviorRelay<[Stock]>(value: [])
+    let error = PublishSubject<Error>()
+    
+    private let stocks = BehaviorRelay<[StockCellViewModel]>(value: [])
     
     private let disposeBag = DisposeBag()
     private let stocksProvider: StocksProviding
     
     init(stocksProvider: StocksProviding = StocksProvider()) {
         self.stocksProvider = stocksProvider
-        fetchStocks()
     }
     
     func fetchStocks() {
@@ -32,17 +33,11 @@ class HomeViewModel {
                 onNext: { [weak self] searchResult in
                     let stocks = searchResult.results
                     
-                    guard stocks.count > 0 else {
-                        self?.stocks.accept([])
-                        return
-                    }
-                    
-                    self?.stocks.accept(stocks)
+                    self?.stocks.accept(stocks.map{StockCellViewModel(withStock: $0)})
                 },
                 onError: { [weak self] error in
                     self?.stocks.accept([])
-                    
-                    print(error)
+                    self?.error.onNext(error)
                 }
         )
             .disposed(by: disposeBag)

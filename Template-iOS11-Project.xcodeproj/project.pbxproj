@@ -22,6 +22,8 @@
 		EDAC99BE241BD9470023008D /* StocksProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC99BD241BD9470023008D /* StocksProvider.swift */; };
 		EDAC99C6241C287B0023008D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC99C5241C287B0023008D /* HomeViewModel.swift */; };
 		EDAC99C8241C3C3F0023008D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC99C7241C3C3F0023008D /* UIViewController+Extension.swift */; };
+		EDAC99CB241CD3E50023008D /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC99CA241CD3E50023008D /* StockTableViewCell.swift */; };
+		EDAC99CD241CD41F0023008D /* StockCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC99CC241CD41F0023008D /* StockCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		EDAC99BD241BD9470023008D /* StocksProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksProvider.swift; sourceTree = "<group>"; };
 		EDAC99C5241C287B0023008D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		EDAC99C7241C3C3F0023008D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		EDAC99CA241CD3E50023008D /* StockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
+		EDAC99CC241CD41F0023008D /* StockCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				EDAC999F241AC7770023008D /* HomeViewController.swift */,
+				EDAC99CA241CD3E50023008D /* StockTableViewCell.swift */,
 				EDAC99C5241C287B0023008D /* HomeViewModel.swift */,
+				EDAC99CC241CD41F0023008D /* StockCellViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -288,6 +294,7 @@
 			files = (
 				EDAC99B2241BB16D0023008D /* AppError.swift in Sources */,
 				EDAC99C8241C3C3F0023008D /* UIViewController+Extension.swift in Sources */,
+				EDAC99CD241CD41F0023008D /* StockCellViewModel.swift in Sources */,
 				EDAC99BC241BD7C80023008D /* StocksProviding.swift in Sources */,
 				EDAC99B4241BB1950023008D /* Parsing.swift in Sources */,
 				EDAC99C6241C287B0023008D /* HomeViewModel.swift in Sources */,
@@ -296,6 +303,7 @@
 				EDAC99BA241BD7300023008D /* Stock.swift in Sources */,
 				EDAC999C241AC7770023008D /* AppDelegate.swift in Sources */,
 				EDAC99B8241BD7070023008D /* SearchResult.swift in Sources */,
+				EDAC99CB241CD3E50023008D /* StockTableViewCell.swift in Sources */,
 				EDAC999E241AC7770023008D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
