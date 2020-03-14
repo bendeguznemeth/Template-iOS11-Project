@@ -81,9 +81,9 @@ class HomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showStockDetail" {
-            let stockViewModel = sender as! StockViewModel
-            let destinationViewController = segue.destination as! StockDetailViewController
+        if segue.identifier == "showStockDetail",
+            let stockViewModel = sender as? StockViewModel,
+            let destinationViewController = segue.destination as? StockDetailViewController {
             destinationViewController.viewModel = stockViewModel
         }
     }

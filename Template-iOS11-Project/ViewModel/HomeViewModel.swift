@@ -16,7 +16,8 @@ class HomeViewModel {
     }
     
     let error = PublishSubject<Error>()
-    let loading = PublishSubject<Bool>()
+    
+    let loading = BehaviorRelay(value: false)
     
     private let stocks = BehaviorRelay<[StockViewModel]>(value: [])
     
@@ -30,19 +31,19 @@ class HomeViewModel {
     }
     
     func fetchStocks() {
-        loading.onNext(true)
+        loading.accept(true)
         stocksProvider
             .fetchStocks(withSymbols: symbols)
             .subscribe(
                 onNext: { [weak self] searchResult in
-                    self?.loading.onNext(false)
+                    self?.loading.accept(false)
                     
                     let stocks = searchResult.results
                     
                     self?.stocks.accept(stocks.map{StockViewModel(withStock: $0)})
                 },
                 onError: { [weak self] error in
-                    self?.loading.onNext(false)
+                    self?.loading.accept(false)
                     
                     self?.stocks.accept([])
                     
